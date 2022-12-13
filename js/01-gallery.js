@@ -37,7 +37,7 @@ function clickOnImage(evt) {
 
     const selectedImg = evt.target.getAttribute("data-source");
     const instance = basicLightbox.create(`
-    <img src="${selectedImg}" width="1200" height="800">
+    <img src="${selectedImg}" width="800" height="600">
 `)
 
     instance.show();
