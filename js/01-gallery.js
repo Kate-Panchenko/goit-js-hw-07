@@ -26,7 +26,7 @@ const newGallery = (items) => {
 };
 
 gallery.insertAdjacentHTML("beforeend", newGallery(galleryItems));
-
+gallery.addEventListener("click", clickOnImage);
 
 function clickOnImage(evt) {
     evt.preventDefault();
@@ -42,11 +42,9 @@ function clickOnImage(evt) {
 
     instance.show();
 
-    gallery.addEventListener('keydown', (closed) => {
-        if (closed.key !== "ESCAPE") {
-            instance.close();
-        }
-    });
+  gallery.addEventListener("keydown", (closed) => {
+      if (closed.key === "Escape") {
+          instance.close();
+    }
+  });
 }
-
-gallery.addEventListener("click", clickOnImage);
